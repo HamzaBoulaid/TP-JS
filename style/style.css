@@ -1,0 +1,42 @@
+.col-md-4 , .users, .TableLayout{
+    margin-top: 10px;
+} 
+.user img{
+    opacity: 0.8;
+}
+.user:hover img{
+    opacity: 1;
+    transform: scale(1.03);
+    transition: 200ms;
+}
+.rowModule{
+    display: none;
+}
+.modificationForm {
+    position: fixed;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 50%;
+    height: auto;
+    padding: 35px;
+    border-radius: 8px;
+    opacity: 0.9;
+    background-color: rgb(240, 240, 240);
+    z-index: 1010;
+    display: none;
+}
+#hideAll
+{
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.75;
+	z-index: 1000;
+}

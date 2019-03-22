@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Users data</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Users Liste : </h1>
+        <button class="btn btn-success showbtn" onclick="change()">Table</button>
+        <div class="users" style="display: block;">
+            <div class="row">
+                
+            </div>
+        </div>
+        <div class="TableLayout" style="display: none;">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Picture</th>
+                        <th scope="col">Full name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Modify</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- table reference to display data in table mode -->
+    <table>
+        <tr class="rowModule">
+            <td><img src=""></td>
+            <td><p class="name"></p></td>
+            <td><p class="gender"></p></td>
+            <td><p class="email"></p></td>
+            <td><button class="btn btn-primary btn-block">Accéder</button></td>
+        </tr>
+    </table>
+
+    <!-- the card reference to display data in grid mode -->
+    <div id="gabari" style="display: none;">
+        <div class="col-md-4 user">
+            <div class="card">
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title name">Card title</h5>
+                    <p class="card-text email"></p>
+                    <button class="btn btn-primary btn-block">Accéder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- form where the users can change the data -->
+    <div class="modificationForm row">
+        <form data-index="">
+            <div class="form-group row">
+                <label for="Firstname" class="col-sm-2 col-form-label">First name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Firstname" placeholder="First name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Lastname" class="col-sm-2 col-form-label">Last name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Lastname" placeholder="Last name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+            </div>
+            <button type="reset" class="btn btn-success" onclick="saveModification()">sauvgarder</button>
+            <button type="reset" class="btn btn-success" onclick="closeForm()">Annuler</button>
+        </form>
+    </div>
+
+    <!-- div to hide the page content with out the modification form -->
+    <div id="hideAll"></div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/users.js"></script>
+    <script src="js/traitement.js"></script>
+</body>
+</html>
